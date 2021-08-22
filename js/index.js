@@ -1,8 +1,10 @@
+// display price//
 function updateExtra(costId, cost) {
   document.getElementById(costId).innerText = cost;
  updatePrice();
 }
 
+// price calculation//
 function updatePrice() {
   const memoryCostText = document.getElementById('memory-cost').innerText
   const memoryCost = parseInt(memoryCostText)
@@ -22,8 +24,10 @@ function updatePrice() {
   document.getElementById('bottom-total').innerText = totalCost
 }
 
+// addEventListener click function//
 document.getElementById("memory-price-1").addEventListener("click", function () {
     updateExtra("memory-cost", 0);
+    activeButton('memory-cost')
   });
 document.getElementById("memory-price-2").addEventListener("click", function () {
     updateExtra("memory-cost", 180);
@@ -44,6 +48,7 @@ document.getElementById("delivery-cost-2").addEventListener("click", function ()
     updateExtra("delivery-cost", 20);
   });
 
+//promo code //  
 document.getElementById("promo-code").addEventListener("click", function () {
   const promoCode = document.getElementById("promo-type").value.toLowerCase();
   const fixedCode = "stevekaku";

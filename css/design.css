@@ -22,6 +22,7 @@ h4 {
 }
 h5 {
     margin:0;
+    display: inline;
 }
 
 button {
@@ -31,7 +32,11 @@ button {
     border: 2px solid gray;
     background-color: white;
     border-radius: 5px;
-    font-size: 1.5 rem;
+    font-weight: bold;
+}
+button:hover {
+    background-color: rgb(97, 90, 90);
+    color: white;
 }
 
 .part2 {
@@ -45,16 +50,25 @@ button {
 }
 .part5 {
   margin-bottom: 30px;
-  width: 57%;
+  width: 84%;
 }
 .part6>p {
     margin: 0;
 }
-
+.best-price{
+    padding-right: 151px;
+}
+.memory-cost {
+    padding-right: 70px;
+}
+.storage-cost {
+    padding-right: 78px;
+}
+.delivery-cost {
+    padding-right: 92px;
+}
 .total-price {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 2px solid black;
+    padding-right: 150px
 }
 
 input {
@@ -62,9 +76,14 @@ input {
     border-radius: 5px;
 }
 #promo-code {
+    background-color: white;
+    color: black;
+}
+#promo-code:hover {
     color: white;
     background: rgb(207, 40, 40);
 }
+
 .bottom-total {
     text-align: center;
     border-top: 1px solid gray;
@@ -72,7 +91,7 @@ input {
     margin-right: 5%;
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:800px) {
     .container {
         display: inline;
     }
