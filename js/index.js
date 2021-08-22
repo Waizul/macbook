@@ -1,11 +1,11 @@
 function updateExtra(costId, cost) {
   document.getElementById(costId).innerText = cost;
+ updatePrice();
 }
 
-function updatePrice(costId) {
+function updatePrice() {
   const memoryCostText = document.getElementById('memory-cost').innerText
   const memoryCost = parseInt(memoryCostText)
-
   let price1 = memoryCost
   console.log(price1)
   const storageCostText = document.getElementById("storage-cost").innerText;
@@ -24,31 +24,24 @@ function updatePrice(costId) {
 
 document.getElementById("memory-price-1").addEventListener("click", function () {
     updateExtra("memory-cost", 0);
-    updatePrice('memory-cost');
   });
 document.getElementById("memory-price-2").addEventListener("click", function () {
     updateExtra("memory-cost", 180);
-    updatePrice('memory-cost');
   })
 document.getElementById("storage-price-1").addEventListener("click", function () {
-    updateExtra("storage-cost", 0);
-    updatePrice('storage-cost');
+    updateExtra("storage-cost", 0);    updatePrice();
   });
 document.getElementById("storage-price-2").addEventListener("click", function () {
     updateExtra("storage-cost", 100);
-    updatePrice('storage-cost');
   });
 document.getElementById("storage-price-3").addEventListener("click", function () {
     updateExtra("storage-cost", 180);
-    updatePrice("storage-cost");
   });
 document.getElementById("delivery-cost-1").addEventListener("click", function () {
     updateExtra("delivery-cost", 0);
-    updatePrice("delivery-cost");
   });
 document.getElementById("delivery-cost-2").addEventListener("click", function () {
     updateExtra("delivery-cost", 20);
-    updatePrice("delivery-cost");
   });
 
 document.getElementById("promo-code").addEventListener("click", function () {
